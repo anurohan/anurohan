@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" role="img" aria-label="Build, Break, Understand, Improve, Repeat">
+<defs>
+<style>
+.m{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.s{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+</style>
+</defs>
+<rect x=".5" y=".5" width="999" height="359" rx="14" fill="#070b12" stroke="#16283a"/>
+
+<circle cx="500" cy="190" r="78" fill="none" stroke="#12202e"/>
+<circle cx="500" cy="190" r="110" fill="none" stroke="#4fd8ff" stroke-opacity=".35" stroke-dasharray="3 9">
+<animateTransform attributeName="transform" type="rotate" from="0 500 190" to="360 500 190" dur="40s" repeatCount="indefinite"/></circle>
+<path d="M500 80L604.6 156L564.7 279L435.3 279L395.4 156Z" fill="none" stroke="#16283a"/>
+<circle r="4" fill="#4fd8ff"><animateMotion dur="12s" repeatCount="indefinite" path="M390 190a110 110 0 1 1 220 0a110 110 0 1 1 -220 0"/></circle>
+
+<g fill="#070b12" stroke="#4fd8ff" stroke-width="1.8">
+<circle cx="500" cy="80" r="8"/><circle cx="604.6" cy="156" r="8"/><circle cx="564.7" cy="279" r="8"/><circle cx="435.3" cy="279" r="8"/><circle cx="395.4" cy="156" r="8"/>
+</g>
+
+<g class="s" font-size="17" font-weight="700" fill="#e6edf3" letter-spacing="2">
+<text x="500" y="50" text-anchor="middle">BUILD</text>
+<text x="630" y="152">BREAK</text>
+<text x="588" y="283">UNDERSTAND</text>
+<text x="412" y="283" text-anchor="end">IMPROVE</text>
+<text x="370" y="152" text-anchor="end">REPEAT</text>
+</g>
+<g class="m" font-size="11" fill="#6f8294">
+<text x="500" y="66" text-anchor="middle">ship a working version</text>
+<text x="630" y="170">find where it fails</text>
+<text x="588" y="301">learn why it failed</text>
+<text x="412" y="301" text-anchor="end">make it better</text>
+<text x="370" y="170" text-anchor="end">start again, smarter</text>
+</g>
+
+<g class="m" text-anchor="middle" font-size="11">
+<text x="500" y="186" fill="#8b9bab">curiosity = true</text>
+<text x="500" y="204" fill="#4fd8ff">// loop: forever</text>
+</g>
+
+<text class="s" x="60" y="200" font-size="26" font-weight="800" fill="#e6edf3">FAILURE</text>
+<text class="s" x="60" y="230" font-size="26" font-weight="800" fill="#4fd8ff">IS DATA.</text>
+<text class="s" x="940" y="200" text-anchor="end" font-size="26" font-weight="800" fill="#e6edf3">SMALL LOOPS.</text>
+<text class="s" x="940" y="230" text-anchor="end" font-size="26" font-weight="800" fill="#4fd8ff">FAST FEEDBACK.</text>
+</svg>

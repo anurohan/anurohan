@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-label="Terminal session: whoami, focus, building, status, limits">
+<defs>
+<style>
+.m{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.b{animation:b 1.1s infinite}
+@keyframes b{0%,49%{opacity:1}50%,100%{opacity:0}}
+</style>
+</defs>
+<rect x=".5" y=".5" width="999" height="399" rx="12" fill="#05080d" stroke="#16283a"/>
+<rect x="1" y="1" width="998" height="40" rx="11" fill="#0b121b"/>
+<rect x="1" y="26" width="998" height="15" fill="#0b121b"/>
+<circle cx="26" cy="21" r="5" fill="#2a3644"/><circle cx="46" cy="21" r="5" fill="#2a3644"/><circle cx="66" cy="21" r="5" fill="#2a3644"/>
+<text class="m" x="500" y="26" text-anchor="middle" font-size="12" fill="#5c6f82">raushan@engineering-lab: ~</text>
+
+<g class="m" font-size="17">
+
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.03;.034;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="92"><tspan fill="#3ddc97">raushan@engineering-lab</tspan><tspan fill="#5c6f82">:</tspan><tspan fill="#4fd8ff">~</tspan><tspan fill="#5c6f82">$</tspan><tspan dx="10" fill="#e6edf3">whoami</tspan></text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.08;.084;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="119" fill="#e6edf3">AI / ML Engineer in Progress</text></g>
+
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.15;.154;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="146"><tspan fill="#3ddc97">raushan@engineering-lab</tspan><tspan fill="#5c6f82">:</tspan><tspan fill="#4fd8ff">~</tspan><tspan fill="#5c6f82">$</tspan><tspan dx="10" fill="#e6edf3">focus</tspan></text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.20;.204;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="173" fill="#e6edf3">AI + Software + Hardware</text></g>
+
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.27;.274;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="200"><tspan fill="#3ddc97">raushan@engineering-lab</tspan><tspan fill="#5c6f82">:</tspan><tspan fill="#4fd8ff">~</tspan><tspan fill="#5c6f82">$</tspan><tspan dx="10" fill="#e6edf3">building</tspan></text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.32;.324;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="227" fill="#e6edf3">Intelligent Systems</text></g>
+
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.39;.394;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="254"><tspan fill="#3ddc97">raushan@engineering-lab</tspan><tspan fill="#5c6f82">:</tspan><tspan fill="#4fd8ff">~</tspan><tspan fill="#5c6f82">$</tspan><tspan dx="10" fill="#e6edf3">status</tspan></text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.44;.444;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="281" fill="#e6edf3">ONLINE <tspan class="b" fill="#3ddc97">●</tspan></text></g>
+
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.51;.514;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="308"><tspan fill="#3ddc97">raushan@engineering-lab</tspan><tspan fill="#5c6f82">:</tspan><tspan fill="#4fd8ff">~</tspan><tspan fill="#5c6f82">$</tspan><tspan dx="10" fill="#e6edf3">limits --check</tspan></text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.56;.564;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="335" fill="#6f8294">404: limits not found.</text></g>
+
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.64;.644;.95;.98;1" dur="18s" repeatCount="indefinite"/>
+<text x="36" y="362"><tspan fill="#3ddc97">raushan@engineering-lab</tspan><tspan fill="#5c6f82">:</tspan><tspan fill="#4fd8ff">~</tspan><tspan fill="#5c6f82">$</tspan></text>
+<rect class="b" x="326" y="347" width="10" height="19" fill="#4fd8ff"/></g>
+
+</g>
+</svg>

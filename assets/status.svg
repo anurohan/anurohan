@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 290" width="1000" height="290" role="img" aria-label="Currently exploring eight tracks from software to hardware">
+<defs>
+<style>
+.m{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.s{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+</style>
+</defs>
+<rect x=".5" y=".5" width="999" height="289" rx="14" fill="#070b12" stroke="#16283a"/>
+<text class="m" x="40" y="40" font-size="12" letter-spacing="4" fill="#4fd8ff">CURRENTLY EXPLORING</text>
+<text class="m" x="960" y="40" text-anchor="end" font-size="11" letter-spacing="3" fill="#4b5c6e">SOFTWARE ──────────► HARDWARE</text>
+
+<g fill="#09121b" stroke="#16283a">
+<rect x="40" y="64" width="440" height="42" rx="6"/><rect x="40" y="116" width="440" height="42" rx="6"/><rect x="40" y="168" width="440" height="42" rx="6"/><rect x="40" y="220" width="440" height="42" rx="6"/>
+<rect x="520" y="64" width="440" height="42" rx="6"/><rect x="520" y="116" width="440" height="42" rx="6"/><rect x="520" y="168" width="440" height="42" rx="6"/><rect x="520" y="220" width="440" height="42" rx="6"/>
+</g>
+
+<g class="m" font-size="13" fill="#4fd8ff">
+<text x="56" y="90">01</text><text x="56" y="142">02</text><text x="56" y="194">03</text><text x="56" y="246">04</text>
+<text x="536" y="90">05</text><text x="536" y="142">06</text><text x="536" y="194">07</text><text x="536" y="246">08</text>
+</g>
+<g class="s" font-size="16" font-weight="600" fill="#e6edf3">
+<text x="92" y="91">ADVANCED RAG</text><text x="92" y="143">MULTIMODAL AI</text><text x="92" y="195">COMPUTER VISION</text><text x="92" y="247">AI AGENTS</text>
+<text x="572" y="91">VECTOR DATABASES</text><text x="572" y="143">ROBOTICS</text><text x="572" y="195">IoT</text><text x="572" y="247">INTELLIGENT HARDWARE</text>
+</g>
+<g class="m" font-size="11" fill="#4b5c6e" text-anchor="end" letter-spacing="2">
+<text x="412" y="90">AI</text><text x="412" y="142">AI</text><text x="412" y="194">AI</text><text x="412" y="246">AI</text>
+<text x="892" y="90">DATA</text><text x="892" y="142">HW</text><text x="892" y="194">HW</text><text x="892" y="246">HW</text>
+</g>
+<g fill="#3ddc97">
+<circle cx="452" cy="85" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="137" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin=".3s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="189" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin=".6s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="241" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin=".9s" repeatCount="indefinite"/></circle>
+<circle cx="932" cy="85" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="932" cy="137" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin="1.5s" repeatCount="indefinite"/></circle>
+<circle cx="932" cy="189" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="932" cy="241" r="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" begin="2.1s" repeatCount="indefinite"/></circle>
+</g>
+</svg>

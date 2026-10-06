@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280" role="img" aria-label="Ideas to Code to AI to Systems to Hardware to Real-world use">
+<defs>
+<style>
+.m{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.s{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+.f{stroke-dasharray:5 6;animation:f 1.2s linear infinite}
+@keyframes f{to{stroke-dashoffset:-11}}
+</style>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 1L9 5L0 9Z" fill="#4fd8ff"/></marker>
+</defs>
+<rect x=".5" y=".5" width="999" height="279" rx="14" fill="#070b12" stroke="#16283a"/>
+
+<g class="f" stroke="#4fd8ff" stroke-opacity=".7" fill="none">
+<path d="M180 116H202" marker-end="url(#a)"/><path d="M334 116H356" marker-end="url(#a)"/><path d="M488 116H510" marker-end="url(#a)"/><path d="M642 116H664" marker-end="url(#a)"/><path d="M796 116H818" marker-end="url(#a)"/>
+</g>
+<circle r="3.5" fill="#4fd8ff"><animateMotion dur="5s" repeatCount="indefinite" path="M50 116H950"/></circle>
+
+<g class="m" font-size="11" fill="#4b5c6e" letter-spacing="2">
+<text x="50" y="62">01</text><text x="204" y="62">02</text><text x="358" y="62">03</text><text x="512" y="62">04</text><text x="666" y="62">05</text><text x="820" y="62">06</text>
+</g>
+
+<rect x="50" y="74" width="130" height="84" rx="8" fill="#09121b" stroke="#1b2d3d"/>
+<rect x="204" y="74" width="130" height="84" rx="8" fill="#09121b" stroke="#1f3a4d"/>
+<rect x="358" y="74" width="130" height="84" rx="8" fill="#09121b" stroke="#24506a"/>
+<rect x="512" y="74" width="130" height="84" rx="8" fill="#09121b" stroke="#2b6f8c"/>
+<rect x="666" y="74" width="130" height="84" rx="8" fill="#0a1a26" stroke="#3ba8cf"/>
+<rect x="820" y="74" width="130" height="84" rx="8" fill="#0b2230" stroke="#4fd8ff" stroke-width="1.8">
+<animate attributeName="stroke-opacity" values="1;.45;1" dur="2.6s" repeatCount="indefinite"/></rect>
+
+<g class="s" font-size="17" font-weight="700" fill="#e6edf3" text-anchor="middle" letter-spacing="1">
+<text x="115" y="112">IDEAS</text><text x="269" y="112">CODE</text><text x="423" y="112">AI</text><text x="577" y="112">SYSTEMS</text><text x="731" y="112">HARDWARE</text><text x="885" y="112" fill="#4fd8ff">REAL-WORLD</text>
+</g>
+<g class="m" font-size="11" fill="#8b9bab" text-anchor="middle">
+<text x="115" y="136">problem → concept</text><text x="269" y="136">Python · C++ · JS</text><text x="423" y="136">CV · NLP · RAG</text><text x="577" y="136">APIs · apps · data</text><text x="731" y="136">Arduino · sensors</text><text x="885" y="136">useful outcomes</text>
+</g>
+
+<text class="s" x="500" y="224" text-anchor="middle" font-size="23" font-weight="600" fill="#e6edf3">I don't just write code. I like building <tspan fill="#4fd8ff" font-weight="800">systems</tspan>.</text>
+<text class="m" x="500" y="252" text-anchor="middle" font-size="12" letter-spacing="3" fill="#4b5c6e">SOFTWARE THAT REACHES THE PHYSICAL WORLD</text>
+</svg>
