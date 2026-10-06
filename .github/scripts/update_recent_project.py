@@ -93,8 +93,7 @@ def extract_project_info(owner, repo_data, token=None):
         problem = "Contextual question-answering with semantic passage retrieval over vector database."
         stack = "Python · TypeScript · FAISS · Ollama · Sentence Transformers · RAG"
         feature = "Conversational AI companion matching user queries against indexed discourse vectors."
-        if not homepage:
-            homepage = "https://osho-ai.vercel.app"
+        homepage = "https://frontend-phi-topaz-18.vercel.app/"
     elif repo_name.lower() == "lifelens-ai":
         subtitle = "Multimodal Personal Knowledge System"
         problem = "Personal information is scattered across formats and hard to organize or retrieve."

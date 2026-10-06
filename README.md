@@ -103,13 +103,13 @@
 <!-- RECENT-PROJECT-START -->
 <div align="center">
 
-<a href="https://osho-ai.vercel.app">
-  <img src="./assets/recent-project.svg?v=1791294770" alt="Recently Developed — OSHO AI" width="100%"/>
+<a href="https://frontend-phi-topaz-18.vercel.app/">
+  <img src="./assets/recent-project.svg?v=1791295100" alt="Recently Developed — OSHO AI" width="100%"/>
 </a>
 
 <br/><br/>
 
-<a href="https://osho-ai.vercel.app"><img src="https://img.shields.io/badge/LIVE_DEMO-%E2%86%92-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Live Demo"/></a>
+<a href="https://frontend-phi-topaz-18.vercel.app/"><img src="https://img.shields.io/badge/LIVE_DEMO-%E2%86%92-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Live Demo"/></a>
 &nbsp;
 <a href="https://github.com/anurohan/osho-ai"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
 
