@@ -5,6 +5,7 @@ import json
 import base64
 import urllib.request
 import urllib.error
+import time
 
 def fetch_json(url, token=None):
     headers = {"User-Agent": "Mozilla/5.0"}
@@ -55,7 +56,6 @@ def get_latest_project(username, token=None):
     return filtered[0]
 
 def clean_title(name):
-    # e.g. osho-ai -> OSHO AI, lifelens-ai -> LIFELENS AI
     cleaned = name.replace("-", " ").replace("_", " ").strip()
     words = cleaned.split()
     res = []
@@ -81,7 +81,7 @@ def extract_project_info(owner, repo_data, token=None):
     # Topics
     topics = repo_data.get("topics") or []
 
-    # If description is missing, inspect repo for context
+    # Defaults
     subtitle = "Intelligent System & Software Build"
     problem = "Engineering intelligent workflows and real-world system applications."
     feature = "Built with high performance and modular design."
@@ -93,11 +93,15 @@ def extract_project_info(owner, repo_data, token=None):
         problem = "Contextual question-answering with semantic passage retrieval over vector database."
         stack = "Python · TypeScript · FAISS · Ollama · Sentence Transformers · RAG"
         feature = "Conversational AI companion matching user queries against indexed discourse vectors."
+        if not homepage:
+            homepage = "https://osho-ai.vercel.app"
     elif repo_name.lower() == "lifelens-ai":
         subtitle = "Multimodal Personal Knowledge System"
         problem = "Personal information is scattered across formats and hard to organize or retrieve."
         stack = "Python · Next.js · FastAPI · PostgreSQL · pgvector · Sentence Transformers"
         feature = "Processes, organizes and semantically retrieves personal information in real time."
+        if not homepage:
+            homepage = "https://lifelens-ai-nine.vercel.app"
     else:
         # Check README if desc is empty
         if not desc:
@@ -105,7 +109,6 @@ def extract_project_info(owner, repo_data, token=None):
             if not readme_text:
                 readme_text = fetch_file_content(owner, repo_name, "app/README.md", token)
             if readme_text:
-                # Find first non-header non-empty line
                 lines = [line.strip() for line in readme_text.splitlines() if line.strip() and not line.startswith("#")]
                 if lines:
                     desc = lines[0][:120]
@@ -134,7 +137,6 @@ def generate_svg(info):
     stack = info["stack"]
     feature = info["feature"]
 
-    # Escape XML entities
     def esc(text):
         return (text.replace("&", "&amp;")
                     .replace("<", "&lt;")
@@ -176,16 +178,25 @@ def update_readme(info, readme_path):
     with open(readme_path, "r", encoding="utf-8") as f:
         content = f.read()
 
+    target_url = info.get("homepage") if info.get("homepage") else info["html_url"]
+    
     demo_button = ""
     if info.get("homepage"):
         demo_button = f'<a href="{info["homepage"]}"><img src="https://img.shields.io/badge/LIVE_DEMO-%E2%86%92-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Live Demo"/></a>\n&nbsp;\n'
 
     source_button = f'<a href="{info["html_url"]}"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>'
 
+    # Cache buster query string using current unix timestamp or version
+    v_param = f"v={int(time.time())}"
+
     new_section = f"""<!-- RECENT-PROJECT-START -->
 <div align="center">
 
-<img src="./assets/recent-project.svg" alt="Recently Developed — {info['title']}" width="100%"/>
+<a href="{target_url}">
+  <img src="./assets/recent-project.svg?{v_param}" alt="Recently Developed — {info['title']}" width="100%"/>
+</a>
+
+<br/><br/>
 
 {demo_button}{source_button}
 
@@ -196,7 +207,6 @@ def update_readme(info, readme_path):
     if re.search(pattern, content):
         content = re.sub(pattern, new_section, content)
     else:
-        # If markers don't exist yet, insert them under screen 04
         old_screen04 = r'<h2 align="center" id="recently-developed">RECENTLY DEVELOPED PROJECT</h2>[\s\S]*?<img src="\./assets/divider\.svg" width="100%" alt=""/>'
         replacement = f"""<h2 align="center" id="recently-developed">RECENTLY DEVELOPED PROJECT</h2>
 
@@ -212,7 +222,6 @@ def main():
     username = os.environ.get("GITHUB_REPOSITORY_OWNER", "anurohan")
     token = os.environ.get("GITHUB_TOKEN")
     
-    # Root dir of repo
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
 
@@ -224,7 +233,7 @@ def main():
 
     print(f"Latest repository found: {latest_repo['name']} (pushed: {latest_repo.get('pushed_at')})")
     info = extract_project_info(username, latest_repo, token)
-    print(f"Extracted info: {info['title']} | Stack: {info['stack']}")
+    print(f"Extracted info: {info['title']} | Homepage: {info['homepage']} | Repo: {info['html_url']}")
 
     # 1. Update SVG
     svg_content = generate_svg(info)
