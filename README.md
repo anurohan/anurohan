@@ -100,15 +100,15 @@
 
 <h2 align="center" id="recently-developed">RECENTLY DEVELOPED PROJECT</h2>
 
+<!-- RECENT-PROJECT-START -->
 <div align="center">
 
-<img src="./assets/recent-project.svg" alt="Recently Developed — LifeLens AI: Multimodal Personal Knowledge System" width="100%"/>
+<img src="./assets/recent-project.svg" alt="Recently Developed — OSHO AI" width="100%"/>
 
-<a href="https://lifelens-ai-nine.vercel.app"><img src="https://img.shields.io/badge/LIVE_DEMO-%E2%86%92-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Live Demo"/></a>
-&nbsp;
-<a href="https://github.com/anurohan/lifelens-ai"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
+<a href="https://github.com/anurohan/osho-ai"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
 
 </div>
+<!-- RECENT-PROJECT-END -->
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
 
