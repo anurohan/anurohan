@@ -1,4 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-label="Raushan Kumar — Live DSA Coding Lab (Java / Algorithms)">
+#!/usr/bin/env python3
+"""
+generate_dsa_hero.py
+Generates the Live DSA Coding Lab animated SVG for Raushan Kumar's GitHub Profile.
+- Dimensions: 1000 x 400 (viewBox="0 0 1000 400")
+- 100% self-contained pure SVG + CSS keyframes (GitHub Camo & img tag compatible, 0 JS runtime)
+- Multi-problem continuous cinematic execution cycle:
+    1. Two Sum (HashMap)
+    2. Binary Search (Divide & Conquer)
+    3. Valid Parentheses (Stack LIFO)
+    4. Longest Substring Without Repeating Characters (Sliding Window)
+- High-tech engineering-lab aesthetic matching current profile palette
+"""
+
+import os
+import json
+
+def generate_svg():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    workspace_dir = os.path.abspath(os.path.join(script_dir, "..", ".."))
+    problems_path = os.path.join(workspace_dir, "data", "problems.json")
+    output_path = os.path.join(workspace_dir, "assets", "hero.svg")
+
+    # Read problems data
+    with open(problems_path, "r", encoding="utf-8") as f:
+        all_problems = json.load(f)
+
+    svg_content = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-label="Raushan Kumar — Live DSA Coding Lab (Java / Algorithms)">
 <title>Raushan Kumar — Live DSA Coding Lab (Java / Algorithms)</title>
 <defs>
 <style><![CDATA[
@@ -924,3 +951,11 @@
 </g>
 
 </svg>
+"""
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(svg_content.strip() + "\n")
+    print(f"[SUCCESS] Generated hero SVG at {output_path} ({len(svg_content)} bytes)")
+
+if __name__ == "__main__":
+    generate_svg()

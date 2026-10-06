@@ -6,7 +6,7 @@
 
 <div align="center">
 
-<img src="./assets/hero.svg" alt="Raushan Kumar — AI × Software × Hardware" width="100%"/>
+<img src="./assets/hero.svg" alt="Raushan Kumar — Live DSA Coding Lab (Java / Algorithms)" width="100%"/>
 
 <a href="#engineering-philosophy"><code>PHILOSOPHY</code></a> &nbsp;·&nbsp;
 <a href="#what-i-build"><code>WHAT I BUILD</code></a> &nbsp;·&nbsp;

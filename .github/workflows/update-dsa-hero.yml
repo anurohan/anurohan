@@ -1,0 +1,38 @@
+name: Update Live DSA Hero
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run once a week on Sunday at midnight UTC to keep the build fresh
+    - cron: '0 0 * * 0'
+
+permissions:
+  contents: write
+
+jobs:
+  update-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate DSA Hero SVG
+        run: |
+          python .github/scripts/generate_dsa_hero.py
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/hero.svg
+          if git diff --staged --quiet; then
+            echo "No changes in hero.svg"
+          else
+            git commit -m "Auto-regenerate Live DSA Coding Lab hero [skip ci]"
+            git push
+          fi
