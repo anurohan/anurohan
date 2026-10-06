@@ -10,7 +10,7 @@
 
 <a href="#engineering-philosophy"><code>PHILOSOPHY</code></a> &nbsp;·&nbsp;
 <a href="#what-i-build"><code>WHAT I BUILD</code></a> &nbsp;·&nbsp;
-<a href="#featured-projects"><code>PROJECTS</code></a> &nbsp;·&nbsp;
+<a href="#recently-developed"><code>RECENT PROJECT</code></a> &nbsp;·&nbsp;
 <a href="#current-build-status"><code>STATUS</code></a> &nbsp;·&nbsp;
 <a href="#github-command-center"><code>COMMAND CENTER</code></a> &nbsp;·&nbsp;
 <a href="#lets-build-something"><code>CONNECT</code></a>
@@ -27,7 +27,7 @@
 
 <p align="center"><sub><code>SCREEN 02 / PHILOSOPHY</code></sub></p>
 
-<h2 align="center">ENGINEERING PHILOSOPHY</h2>
+<h2 align="center" id="engineering-philosophy">ENGINEERING PHILOSOPHY</h2>
 
 <div align="center">
 
@@ -43,7 +43,7 @@
 
 <p align="center"><sub><code>SCREEN 03 / SYSTEMS</code></sub></p>
 
-<h2 align="center">WHAT I BUILD</h2>
+<h2 align="center" id="what-i-build">WHAT I BUILD</h2>
 
 <div align="center">
 
@@ -96,40 +96,17 @@
 
 <!-- ═══════════ SCREEN 04 ═══════════ -->
 
-<p align="center"><sub><code>SCREEN 04 / PRODUCTS</code></sub></p>
+<p align="center"><sub><code>SCREEN 04 / RECENT BUILD</code></sub></p>
 
-<h2 align="center">FEATURED PROJECTS</h2>
+<h2 align="center" id="recently-developed">RECENTLY DEVELOPED PROJECT</h2>
 
 <div align="center">
 
-<img src="./assets/project-01-lifelens.svg" alt="Project 01 — LifeLens AI: Multimodal Personal Knowledge System" width="100%"/>
+<img src="./assets/recent-project.svg" alt="Recently Developed — LifeLens AI: Multimodal Personal Knowledge System" width="100%"/>
 
-<a href="https://lifelens-ai-nine.vercel.app"><img src="https://img.shields.io/badge/VIEW_PROJECT-%E2%86%92-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="View project"/></a>
+<a href="https://lifelens-ai-nine.vercel.app"><img src="https://img.shields.io/badge/LIVE_DEMO-%E2%86%92-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Live Demo"/></a>
+&nbsp;
 <a href="https://github.com/anurohan/lifelens-ai"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
-
-<br/><br/>
-
-<img src="./assets/project-02-wisdomlens.svg" alt="Project 02 — WisdomLens: Intelligent Knowledge Assistant" width="100%"/>
-
-<a href="https://github.com/anurohan"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
-
-<br/><br/>
-
-<img src="./assets/project-03-vision.svg" alt="Project 03 — Real-Time Vision System: Real-Time Image and Video Detection" width="100%"/>
-
-<a href="https://github.com/anurohan"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
-
-<br/><br/>
-
-<img src="./assets/project-04-safeway.svg" alt="Project 04 — Safe Way: Driver Safety System" width="100%"/>
-
-<a href="https://github.com/anurohan"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
-
-<br/><br/>
-
-<img src="./assets/project-05-printer.svg" alt="Project 05 — 2D Printer: Arduino, servo and stepper motors" width="100%"/>
-
-<a href="https://github.com/anurohan"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
 
 </div>
 
@@ -139,7 +116,7 @@
 
 <p align="center"><sub><code>SCREEN 05 / EXPERIMENTS</code></sub></p>
 
-<h2 align="center">CURRENT BUILD STATUS</h2>
+<h2 align="center" id="current-build-status">CURRENT BUILD STATUS</h2>
 
 <div align="center">
 
@@ -168,7 +145,7 @@ BUILD LOG / 2026
 
 <p align="center"><sub><code>SCREEN 06 / TELEMETRY</code></sub></p>
 
-<h2 align="center">GITHUB COMMAND CENTER</h2>
+<h2 align="center" id="github-command-center">GITHUB COMMAND CENTER</h2>
 
 <table align="center">
 <tr>
@@ -186,11 +163,6 @@ BUILD LOG / 2026
 </tr>
 <tr>
 <td colspan="2" align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=anurohan&bg_color=070b12&color=4fd8ff&line=4fd8ff&point=ffffff&area=true&area_color=4fd8ff&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution activity graph" width="100%"/>
-</td>
-</tr>
-<tr>
-<td colspan="2" align="center">
 <img src="https://raw.githubusercontent.com/anurohan/anurohan/output/github-snake.svg" alt="Contribution snake animation" width="100%"/>
 </td>
 </tr>
@@ -202,7 +174,7 @@ BUILD LOG / 2026
 
 <p align="center"><sub><code>SCREEN 07 / CONNECT</code></sub></p>
 
-<h2 align="center">LET'S BUILD SOMETHING</h2>
+<h2 align="center" id="lets-build-something">LET'S BUILD SOMETHING</h2>
 
 <p align="center">
 If you're working on AI, robotics, or anything that connects software to the physical world,<br/>I'd like to hear about it.
@@ -210,9 +182,13 @@ If you're working on AI, robotics, or anything that connects software to the phy
 
 <p align="center">
 <a href="https://github.com/anurohan"><img src="https://img.shields.io/badge/GITHUB-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="GitHub"/></a>
+&nbsp;
 <a href="https://www.linkedin.com/in/raushan-kumar-verma"><img src="https://img.shields.io/badge/LINKEDIN-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="LinkedIn"/></a>
+&nbsp;
 <a href="https://portpholio-cyan.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Portfolio"/></a>
+&nbsp;
 <a href="mailto:raushanverma1240@gmail.com"><img src="https://img.shields.io/badge/EMAIL-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Email"/></a>
+&nbsp;
 <a href="https://portpholio-cyan.vercel.app/Raushan_Kumar_CV.pdf"><img src="https://img.shields.io/badge/RESUME-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Resume"/></a>
 </p>
 
