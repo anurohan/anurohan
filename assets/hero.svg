@@ -24,6 +24,7 @@
 <rect width="1000" height="400" rx="14" fill="url(#g)"/>
 <rect width="1000" height="400" rx="14" fill="url(#glow)"/>
 <rect x=".5" y=".5" width="999" height="399" rx="14" fill="none" stroke="#1b2a3a"/>
+<path d="M14 366V386H34M986 366V386H966" fill="none" stroke="#4fd8ff" stroke-opacity=".55" stroke-width="1.5"/>
 
 <circle cx="28" cy="24" r="5" fill="#1f2d3d"/><circle cx="46" cy="24" r="5" fill="#1f2d3d"/><circle cx="64" cy="24" r="5" fill="#1f2d3d"/>
 <text class="m" x="972" y="28" text-anchor="end" font-size="11" fill="#4b5c6e" letter-spacing="2">ENGINEERING-LAB // RAUSHAN-KUMAR</text>
@@ -33,7 +34,7 @@
 
 <circle class="blink" cx="64" cy="92" r="4" fill="#3ddc97"/>
 <text class="m" x="78" y="96" font-size="12" fill="#3ddc97" letter-spacing="3">SYSTEM ONLINE</text>
-<text class="m" x="236" y="96" font-size="12" fill="#4b5c6e" letter-spacing="2">/ BUILD 2026</text>
+<text class="m" x="236" y="96" font-size="12" fill="#4fd8ff" letter-spacing="2">/ OPEN TO AI/ML INTERNSHIPS</text>
 
 <text class="s" x="60" y="172" font-size="58" font-weight="800" fill="#e6edf3" textLength="540" lengthAdjust="spacingAndGlyphs">RAUSHAN <tspan fill="#4fd8ff">KUMAR</tspan></text>
 <text class="s" x="62" y="210" font-size="19" font-weight="600" letter-spacing="9" fill="#4fd8ff">AI × SOFTWARE × HARDWARE</text>
@@ -48,6 +49,7 @@
 <text x="88" y="283" clip-path="url(#c4)">ROBOTICS &amp; IoT ENTHUSIAST</text>
 <text x="88" y="283" clip-path="url(#c5)">AI × HARDWARE ENGINEER IN PROGRESS</text>
 </g>
+<text class="m" x="62" y="326" font-size="12" fill="#8b9bab" letter-spacing="1.5">LOVELY PROFESSIONAL UNIVERSITY · B.TECH CSE · 2028</text>
 <text class="m" x="62" y="352" font-size="12" fill="#5c6f82">intelligent systems that connect software with the physical world</text>
 
 <g stroke="#1a3446" stroke-width="1" fill="none">
@@ -63,6 +65,14 @@
 <circle r="3.5" fill="#4fd8ff"><animateMotion dur="3.2s" repeatCount="indefinite" path="M650 190L730 160L810 210L870 210H880"/></circle>
 <circle r="3.5" fill="#4fd8ff"><animateMotion dur="3.2s" begin="1.1s" repeatCount="indefinite" path="M650 110L730 230L810 130L870 210H880"/></circle>
 <circle r="3.5" fill="#4fd8ff"><animateMotion dur="3.2s" begin="2.2s" repeatCount="indefinite" path="M650 270L730 90L810 290L870 210H880"/></circle>
+
+<rect x="880" y="170" width="76" height="80" rx="6" fill="none" stroke="#4fd8ff" stroke-width="1">
+<animate attributeName="x" values="880;868;880" dur="2.4s" repeatCount="indefinite"/>
+<animate attributeName="y" values="170;158;170" dur="2.4s" repeatCount="indefinite"/>
+<animate attributeName="width" values="76;100;76" dur="2.4s" repeatCount="indefinite"/>
+<animate attributeName="height" values="80;104;80" dur="2.4s" repeatCount="indefinite"/>
+<animate attributeName="stroke-opacity" values=".8;0;.8" dur="2.4s" repeatCount="indefinite"/>
+</rect>
 <rect x="880" y="170" width="76" height="80" rx="6" fill="#0a141d" stroke="#4fd8ff" stroke-width="1.5"/>
 <text class="m" x="918" y="215" text-anchor="middle" font-size="13" fill="#4fd8ff" letter-spacing="2">MCU</text>
 <path stroke="#2a7189" d="M896 170v-10M918 170v-10M940 170v-10M896 250v10M918 250v10M940 250v10M956 190h10M956 210h10M956 230h10"/>
