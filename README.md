@@ -111,15 +111,13 @@
 <!-- RECENT-PROJECT-START -->
 <div align="center">
 
-<a href="https://frontend-phi-topaz-18.vercel.app/">
-  <img src="./assets/recent-project.svg?v=1791351705" alt="Recently Developed — OSHO AI" width="100%"/>
+<a href="https://github.com/anurohan/-Star_pattern_c">
+  <img src="./assets/recent-project.svg?v=1791376595" alt="Recently Developed — STAR PATTERN C" width="100%"/>
 </a>
 
 <br/><br/>
 
-<a href="https://frontend-phi-topaz-18.vercel.app/"><img src="https://img.shields.io/badge/LIVE_DEMO-%E2%86%92-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Live Demo"/></a>
-&nbsp;
-<a href="https://github.com/anurohan/osho-ai"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
+<a href="https://github.com/anurohan/-Star_pattern_c"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
 
 </div>
 <!-- RECENT-PROJECT-END -->
