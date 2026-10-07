@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="1000" height="220" role="img" aria-label="Achievements: Rank 1 in college IoT project competition, a rank in a college hackathon, four professional certifications">
+<defs>
+<style>
+.m{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.s{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+</style>
+<linearGradient id="sw"><stop offset="0" stop-color="#4fd8ff" stop-opacity="0"/><stop offset=".5" stop-color="#4fd8ff"/><stop offset="1" stop-color="#4fd8ff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect x=".5" y=".5" width="999" height="219" rx="14" fill="#070b12" stroke="#16283a"/>
+<text class="m" x="36" y="38" font-size="12" letter-spacing="4" fill="#4fd8ff">ACHIEVEMENTS UNLOCKED</text>
+<text class="m" x="964" y="38" text-anchor="end" font-size="11" letter-spacing="3" fill="#4b5c6e">3 / 3</text>
+
+<g fill="#09121b" stroke="#1f3a4d">
+<rect x="36" y="58" width="296" height="130" rx="8"/>
+<rect x="352" y="58" width="296" height="130" rx="8"/>
+<rect x="668" y="58" width="296" height="130" rx="8"/>
+</g>
+<rect x="36" y="58" width="296" height="2" fill="#4fd8ff"/>
+<rect x="352" y="58" width="296" height="2" fill="#4fd8ff" fill-opacity=".6"/>
+<rect x="668" y="58" width="296" height="2" fill="#4fd8ff" fill-opacity=".6"/>
+<rect y="58" width="90" height="2" fill="url(#sw)"><animate attributeName="x" from="-90" to="1000" dur="6s" repeatCount="indefinite"/></rect>
+
+<g class="s" font-weight="800" fill="#4fd8ff" font-size="40">
+<text x="56" y="118">RANK 1</text><text x="372" y="118">RANKED</text><text x="688" y="118">4 CERTS</text>
+</g>
+<g class="s" font-size="15" font-weight="600" fill="#e6edf3">
+<text x="56" y="144">IoT Project Competition</text>
+<text x="372" y="144">College-Level Hackathon</text>
+<text x="688" y="144">Professional Certifications</text>
+</g>
+<g class="m" font-size="11" fill="#6f8294">
+<text x="56" y="166">college level</text>
+<text x="372" y="166">college level</text>
+<text x="688" y="166">Microsoft · LinkedIn · GitHub · freeCodeCamp</text>
+</g>
+</svg>
