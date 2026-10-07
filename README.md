@@ -112,7 +112,7 @@
 <div align="center">
 
 <a href="https://frontend-phi-topaz-18.vercel.app/">
-  <img src="./assets/recent-project.svg?v=1791351411" alt="Recently Developed — OSHO AI" width="100%"/>
+  <img src="./assets/recent-project.svg?v=1791351705" alt="Recently Developed — OSHO AI" width="100%"/>
 </a>
 
 <br/><br/>
