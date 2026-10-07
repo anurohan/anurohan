@@ -6,11 +6,19 @@
 
 <div align="center">
 
-<img src="./assets/hero.svg" alt="Raushan Kumar — Live DSA Coding Lab (Java / Algorithms)" width="100%"/>
+<img src="./assets/hero.svg" alt="Raushan Kumar — AI × Software × Hardware" width="100%"/>
+
+<a href="https://portpholio-cyan.vercel.app/Raushan_Kumar_CV.pdf"><img src="https://img.shields.io/badge/-RESUME-0e2a38?style=for-the-badge&logo=readme&logoColor=4fd8ff" alt="Resume"/></a>
+<a href="https://www.linkedin.com/in/raushan-kumar-verma"><img src="https://img.shields.io/badge/-LINKEDIN-0e2a38?style=for-the-badge&logo=linkedin&logoColor=4fd8ff" alt="LinkedIn"/></a>
+<a href="https://www.instagram.com/rauxxen__/"><img src="https://img.shields.io/badge/-INSTAGRAM-0e2a38?style=for-the-badge&logo=instagram&logoColor=4fd8ff" alt="Instagram"/></a>
+<a href="mailto:raushanverma1240@gmail.com"><img src="https://img.shields.io/badge/-EMAIL-0e2a38?style=for-the-badge&logo=gmail&logoColor=4fd8ff" alt="Email"/></a>
+
+<br/><br/>
 
 <a href="#engineering-philosophy"><code>PHILOSOPHY</code></a> &nbsp;·&nbsp;
 <a href="#what-i-build"><code>WHAT I BUILD</code></a> &nbsp;·&nbsp;
 <a href="#recently-developed"><code>RECENT PROJECT</code></a> &nbsp;·&nbsp;
+<a href="#track-record"><code>TRACK RECORD</code></a> &nbsp;·&nbsp;
 <a href="#current-build-status"><code>STATUS</code></a> &nbsp;·&nbsp;
 <a href="#github-command-center"><code>COMMAND CENTER</code></a> &nbsp;·&nbsp;
 <a href="#lets-build-something"><code>CONNECT</code></a>
@@ -63,12 +71,12 @@
 <tr>
 <td><code>LANGUAGES</code></td>
 <td><img src="https://skillicons.dev/icons?i=py,cpp,java,js&theme=dark" height="42" alt="Python, C++, Java, JavaScript"/></td>
-<td><sub>Python · C++ · Java · JavaScript · SQL</sub></td>
+<td><sub>Python · C++ · Java · JavaScript · SQL &nbsp;|&nbsp; DSA · OOP · DBMS · REST APIs</sub></td>
 </tr>
 <tr>
 <td><code>AI / ML</code></td>
 <td><img src="https://skillicons.dev/icons?i=tensorflow,sklearn,opencv&theme=dark" height="42" alt="TensorFlow, scikit-learn, OpenCV"/></td>
-<td><sub>YOLO · Hugging Face · Sentence Transformers · NLP · Computer Vision · LLMs · RAG</sub></td>
+<td><sub>YOLO · Sentence-Transformers · spaCy · Tesseract OCR · NLP · Computer Vision · RAG · NumPy · Pandas</sub></td>
 </tr>
 <tr>
 <td><code>WEB / API</code></td>
@@ -120,7 +128,25 @@
 
 <!-- ═══════════ SCREEN 05 ═══════════ -->
 
-<p align="center"><sub><code>SCREEN 05 / EXPERIMENTS</code></sub></p>
+<p align="center"><sub><code>SCREEN 05 / PROOF OF WORK</code></sub></p>
+
+<h2 align="center" id="track-record">TRACK RECORD</h2>
+
+<div align="center">
+
+<img src="./assets/gitlog.svg" alt="git log graph: Generative AI certificate Aug 2025, GitHub and freeCodeCamp certificates Sep 2025, VisionDetect Jan 2026, Business Analysis certificate Feb 2026, LifeLens AI May 2026, WisdomLens Aug 2026" width="100%"/>
+
+<br/><br/>
+
+<img src="./assets/achievements.svg" alt="Achievements: Rank 1 in a college IoT project competition, a rank in a college-level hackathon, four professional certifications" width="100%"/>
+
+</div>
+
+<img src="./assets/divider.svg" width="100%" alt=""/>
+
+<!-- ═══════════ SCREEN 06 ═══════════ -->
+
+<p align="center"><sub><code>SCREEN 06 / EXPERIMENTS</code></sub></p>
 
 <h2 align="center" id="current-build-status">CURRENT BUILD STATUS</h2>
 
@@ -147,9 +173,9 @@ BUILD LOG / 2026
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
 
-<!-- ═══════════ SCREEN 06 ═══════════ -->
+<!-- ═══════════ SCREEN 07 ═══════════ -->
 
-<p align="center"><sub><code>SCREEN 06 / TELEMETRY</code></sub></p>
+<p align="center"><sub><code>SCREEN 07 / TELEMETRY</code></sub></p>
 
 <h2 align="center" id="github-command-center">GITHUB COMMAND CENTER</h2>
 
@@ -176,20 +202,23 @@ BUILD LOG / 2026
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
 
-<!-- ═══════════ SCREEN 07 ═══════════ -->
+<!-- ═══════════ SCREEN 08 ═══════════ -->
 
-<p align="center"><sub><code>SCREEN 07 / CONNECT</code></sub></p>
+<p align="center"><sub><code>SCREEN 08 / CONNECT</code></sub></p>
 
 <h2 align="center" id="lets-build-something">LET'S BUILD SOMETHING</h2>
 
 <p align="center">
-If you're working on AI, robotics, or anything that connects software to the physical world,<br/>I'd like to hear about it.
+Looking for an AI/ML internship where I can work on real problems.<br/>
+If you're working on AI, robotics, or anything that connects software to the physical world, I'd like to hear about it.
 </p>
 
 <p align="center">
 <a href="https://github.com/anurohan"><img src="https://img.shields.io/badge/GITHUB-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="GitHub"/></a>
 &nbsp;
 <a href="https://www.linkedin.com/in/raushan-kumar-verma"><img src="https://img.shields.io/badge/LINKEDIN-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="LinkedIn"/></a>
+&nbsp;
+<a href="https://www.instagram.com/rauxxen__/"><img src="https://img.shields.io/badge/INSTAGRAM-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Instagram"/></a>
 &nbsp;
 <a href="https://portpholio-cyan.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-%E2%86%97-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Portfolio"/></a>
 &nbsp;
