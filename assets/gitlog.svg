@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="git log graph of projects and certificates from August 2025 to August 2026">
+<defs>
+<style>
+.m{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.s{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+</style>
+<linearGradient id="p"><stop offset="0" stop-color="#4fd8ff" stop-opacity="0"/><stop offset=".5" stop-color="#4fd8ff"/><stop offset="1" stop-color="#4fd8ff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect x=".5" y=".5" width="999" height="299" rx="14" fill="#070b12" stroke="#16283a"/>
+<text class="m" x="36" y="34" font-size="12" fill="#4b5c6e">$</text>
+<text class="m" x="52" y="34" font-size="12" fill="#4fd8ff" letter-spacing="1">git log --graph --oneline --since="Aug 2025"</text>
+
+<line x1="40" y1="150" x2="970" y2="150" stroke="#1b3447" stroke-width="2"/>
+<rect y="149" width="200" height="2" fill="url(#p)"><animate attributeName="x" from="-200" to="1000" dur="6s" repeatCount="indefinite"/></rect>
+<g stroke="#1b3447"><path d="M200 146v8M260 146v8M320 146v8M380 146v8M440 146v8M500 146v8M560 146v8M620 146v8M680 146v8M740 146v8M800 146v8M860 146v8M920 146v8"/></g>
+
+<!-- projects (above) -->
+<g stroke="#2a7189"><path d="M500 140V108M740 140V108M920 140V108"/></g>
+<g fill="#4fd8ff">
+<circle cx="500" cy="150" r="9"/><circle cx="740" cy="150" r="9"/>
+<circle cx="920" cy="150" r="9"><animate attributeName="r" values="9;12;9" dur="2s" repeatCount="indefinite"/></circle>
+</g>
+<g class="m" font-size="11" fill="#4fd8ff" letter-spacing="2" text-anchor="middle">
+<text x="500" y="58">JAN 2026</text><text x="740" y="58">MAY 2026</text>
+</g>
+<text class="m" x="950" y="58" text-anchor="end" font-size="11" fill="#4fd8ff" letter-spacing="2">AUG 2026</text>
+<g class="s" font-size="18" font-weight="800" fill="#e6edf3" text-anchor="middle">
+<text x="500" y="80">VISIONDETECT</text><text x="740" y="80">LIFELENS AI</text>
+</g>
+<text class="s" x="950" y="80" text-anchor="end" font-size="18" font-weight="800" fill="#e6edf3">WISDOMLENS</text>
+<g class="m" font-size="11" fill="#8b9bab" text-anchor="middle">
+<text x="500" y="98">real-time detection</text><text x="740" y="98">multimodal knowledge</text>
+</g>
+<text class="m" x="950" y="98" text-anchor="end" font-size="11" fill="#8b9bab">RAG · local Llama 3.2</text>
+
+<!-- certificates (below) -->
+<g stroke="#2a7189"><path d="M200 160V212M260 160V248M560 160V212"/></g>
+<g fill="#070b12" stroke="#4fd8ff" stroke-width="1.8">
+<circle cx="200" cy="150" r="5"/><circle cx="254" cy="150" r="5"/><circle cx="266" cy="150" r="5"/><circle cx="560" cy="150" r="5"/>
+</g>
+<g class="m" font-size="11" fill="#c9d1d9">
+<text x="192" y="216" text-anchor="end">Generative AI · Microsoft/LinkedIn</text>
+<text x="192" y="231" text-anchor="end" fill="#4b5c6e">AUG 2025</text>
+<text x="272" y="216">GitHub Professional Cert</text>
+<text x="272" y="231" fill="#4b5c6e">SEP 2025</text>
+<text x="272" y="252">Responsive Web Design · freeCodeCamp</text>
+<text x="272" y="267" fill="#4b5c6e">SEP 2025</text>
+<text x="568" y="216">Business Analysis · Microsoft/LinkedIn</text>
+<text x="568" y="231" fill="#4b5c6e">FEB 2026</text>
+</g>
+<g class="m" font-size="11" fill="#4b5c6e">
+<circle cx="700" cy="262" r="5" fill="#4fd8ff"/><text x="712" y="266">shipped project</text>
+<circle cx="840" cy="262" r="5" fill="#070b12" stroke="#4fd8ff" stroke-width="1.8"/><text x="852" y="266">certification</text>
+</g>
+</svg>
