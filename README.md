@@ -112,7 +112,7 @@
 <div align="center">
 
 <a href="https://github.com/anurohan/-Star_pattern_c">
-  <img src="./assets/recent-project.svg?v=1791605597" alt="Recently Developed — STAR PATTERN C" width="100%"/>
+  <img src="./assets/recent-project.svg?v=1791633140" alt="Recently Developed — STAR PATTERN C" width="100%"/>
 </a>
 
 <br/><br/>
