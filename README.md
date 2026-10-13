@@ -112,7 +112,7 @@
 <div align="center">
 
 <a href="https://github.com/anurohan/hospital">
-  <img src="./assets/recent-project.svg?v=1791849985" alt="Recently Developed — HOSPITAL" width="100%"/>
+  <img src="./assets/recent-project.svg?v=1791898254" alt="Recently Developed — HOSPITAL" width="100%"/>
 </a>
 
 <br/><br/>
