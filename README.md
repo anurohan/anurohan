@@ -111,13 +111,13 @@
 <!-- RECENT-PROJECT-START -->
 <div align="center">
 
-<a href="https://github.com/anurohan/-Star_pattern_c">
-  <img src="./assets/recent-project.svg?v=1791814897" alt="Recently Developed — STAR PATTERN C" width="100%"/>
+<a href="https://github.com/anurohan/hospital">
+  <img src="./assets/recent-project.svg?v=1791849985" alt="Recently Developed — HOSPITAL" width="100%"/>
 </a>
 
 <br/><br/>
 
-<a href="https://github.com/anurohan/-Star_pattern_c"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
+<a href="https://github.com/anurohan/hospital"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
 
 </div>
 <!-- RECENT-PROJECT-END -->
