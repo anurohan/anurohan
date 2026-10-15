@@ -1,4 +1,4 @@
-name: Auto Update Recent Project
+name: Auto Select Featured Project
 
 on:
   schedule:
@@ -14,6 +14,7 @@ permissions:
 jobs:
   update-project:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,7 +24,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run Recent Project Updater
+      - name: Test project ranking
+        run: python -m unittest discover -s .github/scripts -p "test_update_recent_project.py"
+
+      - name: Select project by quality and recent activity
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
@@ -38,6 +42,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes in recent project."
           else
-            git commit -m "chore: auto-update latest project card [skip ci]"
+            git commit -m "chore: refresh featured project card [skip ci]"
             git push
           fi

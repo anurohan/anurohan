@@ -3,21 +3,47 @@ import os
 import re
 import json
 import base64
+import math
+import http.client
 import urllib.request
 import urllib.error
 import time
+from datetime import datetime, timezone
+
+
+EXCLUDED_REPOSITORIES = {
+    "first-contributions",
+    "git-commands-",
+    "daily-_leetcode",
+    "daily_practice-",
+    "basic-c-project",
+    "basic-to-advanve-java",
+    "-star_pattern_c",
+    "cpp",
+}
+MAX_COMMIT_HISTORY = 10
+DOC_COMMIT_PATTERN = re.compile(
+    r"\b(?:docs?|documentation|readme|markdown|gitignore|node_modules)\b",
+    re.IGNORECASE,
+)
 
 def fetch_json(url, token=None):
     headers = {"User-Agent": "Mozilla/5.0"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
     req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    except Exception as e:
-        print(f"Error fetching {url}: {e}")
-        return None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or attempt == 2:
+                raise RuntimeError(f"GitHub API request failed for {url}: {e}") from e
+        except (urllib.error.URLError, http.client.IncompleteRead, json.JSONDecodeError) as e:
+            if attempt == 2:
+                raise RuntimeError(f"GitHub API request failed for {url}: {e}") from e
+        time.sleep(2 ** attempt)
+    raise RuntimeError(f"GitHub API request failed after retries for {url}.")
 
 def fetch_file_content(owner, repo, path, token=None):
     headers = {"User-Agent": "Mozilla/5.0"}
@@ -30,30 +56,105 @@ def fetch_file_content(owner, repo, path, token=None):
             data = json.loads(resp.read().decode("utf-8"))
             if "content" in data:
                 return base64.b64decode(data["content"]).decode("utf-8", "ignore")
-    except Exception:
-        pass
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            raise RuntimeError(f"GitHub API request failed for {url}: {e}") from e
     return None
 
+
+def is_documentation_commit(message):
+    return bool(DOC_COMMIT_PATTERN.search(message))
+
+
+def get_latest_project_update(username, repo_name, token=None):
+    commits_url = (
+        f"https://api.github.com/repos/{username}/{repo_name}/commits"
+        f"?per_page={MAX_COMMIT_HISTORY}"
+    )
+    commits = fetch_json(commits_url, token)
+    for commit in commits:
+        if is_documentation_commit(commit["commit"]["message"]):
+            continue
+        return commit["commit"]["committer"]["date"]
+    return None
+
+
+def is_excluded_project(name, username):
+    normalized = name.lower()
+    return (
+        normalized in {username.lower(), ".github"}
+        or normalized in EXCLUDED_REPOSITORIES
+        or normalized.startswith(("daily-", "daily_", "basic-"))
+    )
+
+
+def calculate_project_score(repo, project_updated_at, now=None):
+    updated = datetime.fromisoformat(project_updated_at.replace("Z", "+00:00"))
+    current = now or datetime.now(timezone.utc)
+    age_days = max(0, (current - updated).total_seconds() / 86400)
+    size_score = min(18, math.log2(repo.get("size", 0) + 1) * 2)
+    quality_score = (
+        size_score
+        + (10 if repo.get("description") else 0)
+        + (8 if repo.get("language") else 0)
+        + (10 if repo.get("homepage") else 0)
+        + min(6, len(repo.get("topics") or []) * 2)
+        + min(12, repo.get("stargazers_count", 0) * 4)
+        + min(12, repo.get("forks_count", 0) * 6)
+    )
+    freshness_score = max(0, 60 - age_days)
+    return quality_score + freshness_score
+
+
 def get_latest_project(username, token=None):
-    url = f"https://api.github.com/users/{username}/repos?sort=pushed&direction=desc&per_page=30"
+    url = f"https://api.github.com/users/{username}/repos?sort=pushed&direction=desc&per_page=100"
     repos = fetch_json(url, token)
     if not repos:
-        return None
-    
-    # Filter out profile repo, forks, and special repos
-    filtered = []
-    for r in repos:
-        name = r.get("name", "")
-        if name.lower() in [username.lower(), ".github"]:
+        raise RuntimeError(f"No repositories returned for GitHub user {username}.")
+
+    candidates = []
+    for repo in repos:
+        name = repo.get("name", "")
+        if (
+            is_excluded_project(name, username)
+            or repo.get("fork", False)
+            or repo.get("archived", False)
+            or repo.get("size", 0) <= 0
+            or not repo.get("language")
+        ):
             continue
-        if r.get("fork", False):
+
+        print(f"Checking project activity: {name}")
+        project_updated_at = get_latest_project_update(username, name, token)
+        if not project_updated_at:
             continue
-        filtered.append(r)
-    
-    if not filtered:
-        return None
-    
-    return filtered[0]
+
+        candidate = dict(repo)
+        candidate["project_updated_at"] = project_updated_at
+        candidate["project_score"] = calculate_project_score(repo, project_updated_at)
+        candidates.append(candidate)
+
+    if not candidates:
+        raise RuntimeError(
+            f"No eligible projects with recent non-documentation activity were found for {username}."
+        )
+
+    ranked = sorted(
+        candidates,
+        key=lambda repo: (
+            repo["project_score"],
+            repo["project_updated_at"],
+            repo.get("pushed_at", ""),
+        ),
+        reverse=True,
+    )
+    print("Top project candidates:")
+    for repo in ranked[:5]:
+        print(
+            f"  {repo['name']}: score {repo['project_score']:.1f}, "
+            f"last project update {repo['project_updated_at']}"
+        )
+    return ranked[0]
 
 def clean_title(name):
     cleaned = name.replace("-", " ").replace("_", " ").strip()
@@ -66,9 +167,20 @@ def clean_title(name):
             res.append(w.capitalize())
     return " ".join(res)
 
+
+def clean_card_text(text, max_length):
+    cleaned = re.sub(r"\s+", " ", re.sub(r"[*_`#]", "", text)).strip()
+    if len(cleaned) <= max_length:
+        return cleaned
+    shortened = cleaned[: max_length - 1].rsplit(" ", 1)[0].rstrip(" ,;:-")
+    if not shortened:
+        shortened = cleaned[: max_length - 1]
+    return shortened + "…"
+
+
 def extract_project_info(owner, repo_data, token=None):
     repo_name = repo_data["name"]
-    display_title = clean_title(repo_name).upper()
+    display_title = clean_card_text(clean_title(repo_name).upper(), 26)
     html_url = repo_data["html_url"]
     homepage = repo_data.get("homepage") or ""
     desc = repo_data.get("description") or ""
@@ -88,7 +200,11 @@ def extract_project_info(owner, repo_data, token=None):
     stack = " · ".join(languages) if languages else "Python · TypeScript"
 
     # Specific smart extraction for known repositories or reading README
-    if repo_name.lower() == "osho-ai":
+    if repo_name.lower() == "hospital":
+        subtitle = "Hospital Appointment and Patient Management"
+        problem = "Streamlining patient services and appointment workflows for a nursing hospital."
+        feature = clean_card_text(desc, 100)
+    elif repo_name.lower() == "osho-ai":
         subtitle = "Retrieval-Augmented Generation (RAG) System"
         problem = "Contextual question-answering with semantic passage retrieval over vector database."
         stack = "Python · TypeScript · FAISS · Ollama · Sentence Transformers · RAG"
@@ -113,8 +229,8 @@ def extract_project_info(owner, repo_data, token=None):
                     desc = lines[0][:120]
         
         if desc:
-            subtitle = desc[:70]
-            feature = desc[:110]
+            subtitle = clean_card_text(desc, 82)
+            feature = clean_card_text(desc, 100)
         if topics:
             stack = " · ".join([t.capitalize() for t in topics[:5]]) + (" · " + " · ".join(languages[:3]) if languages else "")
 
@@ -127,6 +243,7 @@ def extract_project_info(owner, repo_data, token=None):
         "feature": feature,
         "html_url": html_url,
         "homepage": homepage if homepage.startswith("http") else "",
+        "project_updated_at": repo_data["project_updated_at"],
     }
 
 def generate_svg(info):
@@ -142,7 +259,7 @@ def generate_svg(info):
                     .replace(">", "&gt;")
                     .replace('"', "&quot;"))
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Recent Project — {esc(title)}">
+    svg = f"""    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Featured Project — {esc(title)}">
 <defs>
 <style>
 .m{{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}}
@@ -158,8 +275,8 @@ def generate_svg(info):
 <rect y="0" width="140" height="2" fill="url(#sw)"><animate attributeName="x" from="-140" to="1000" dur="5s" repeatCount="indefinite"/></rect>
 
 <circle class="blink" cx="48" cy="42" r="4.5" fill="#3ddc97"/>
-<text class="m" x="62" y="46" font-size="12" letter-spacing="4" fill="#4fd8ff">RECENTLY DEVELOPED</text>
-<text class="m" x="960" y="46" text-anchor="end" font-size="11" letter-spacing="3" fill="#3ddc97">● ACTIVE BUILD / LATEST REPO</text>
+<text class="m" x="62" y="46" font-size="12" letter-spacing="4" fill="#4fd8ff">FEATURED PROJECT</text>
+<text class="m" x="960" y="46" text-anchor="end" font-size="11" letter-spacing="3" fill="#3ddc97">● PROJECT QUALITY / RECENT ACTIVITY</text>
 
 <text class="s" x="40" y="96" font-size="38" font-weight="800" fill="#e6edf3">{esc(title)}</text>
 <text class="s" x="40" y="124" font-size="17" fill="#8b9bab">{esc(subtitle)}</text>
@@ -171,7 +288,7 @@ def generate_svg(info):
 </g>
 </svg>
 """
-    return svg
+    return svg.lstrip()
 
 def update_readme(info, readme_path):
     with open(readme_path, "r", encoding="utf-8") as f:
@@ -186,13 +303,14 @@ def update_readme(info, readme_path):
     source_button = f'<a href="{info["html_url"]}"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>'
 
     # Cache buster query string using current unix timestamp or version
-    v_param = f"v={int(time.time())}"
+    update_time = datetime.fromisoformat(info["project_updated_at"].replace("Z", "+00:00"))
+    v_param = f"v={int(update_time.timestamp())}"
 
     new_section = f"""<!-- RECENT-PROJECT-START -->
 <div align="center">
 
 <a href="{target_url}">
-  <img src="./assets/recent-project.svg?{v_param}" alt="Recently Developed — {info['title']}" width="100%"/>
+  <img src="./assets/recent-project.svg?{v_param}" alt="Featured Project — {info['title']}" width="100%"/>
 </a>
 
 <br/><br/>
@@ -206,8 +324,8 @@ def update_readme(info, readme_path):
     if re.search(pattern, content):
         content = re.sub(pattern, new_section, content)
     else:
-        old_screen04 = r'<h2 align="center" id="recently-developed">RECENTLY DEVELOPED PROJECT</h2>[\s\S]*?<img src="\./assets/divider\.svg" width="100%" alt=""/>'
-        replacement = f"""<h2 align="center" id="recently-developed">RECENTLY DEVELOPED PROJECT</h2>
+        old_screen04 = r'<h2 align="center" id="recently-developed">(?:RECENTLY DEVELOPED PROJECT|FEATURED PROJECT — QUALITY \+ RECENCY)</h2>[\s\S]*?<img src="\./assets/divider\.svg" width="100%" alt=""/>'
+        replacement = f"""<h2 align="center" id="recently-developed">FEATURED PROJECT — QUALITY + RECENCY</h2>
 
 {new_section}
 
@@ -224,15 +342,15 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
 
-    print(f"Fetching latest repo for user: {username}")
-    latest_repo = get_latest_project(username, token)
-    if not latest_repo:
-        print("No repository found.")
-        return
-
-    print(f"Latest repository found: {latest_repo['name']} (pushed: {latest_repo.get('pushed_at')})")
-    info = extract_project_info(username, latest_repo, token)
-    print(f"Extracted info: {info['title']} | Homepage: {info['homepage']} | Repo: {info['html_url']}")
+    print(f"Ranking active project repositories for user: {username}")
+    selected_repo = get_latest_project(username, token)
+    print(
+        f"Selected {selected_repo['name']} "
+        f"(score: {selected_repo['project_score']:.1f}, "
+        f"last project update: {selected_repo['project_updated_at']})"
+    )
+    info = extract_project_info(username, selected_repo, token)
+    print(f"Generated card for {info['title']} | Repo: {info['html_url']}")
 
     # 1. Update SVG
     svg_content = generate_svg(info)

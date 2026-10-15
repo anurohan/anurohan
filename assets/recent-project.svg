@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Recent Project — DAILY LEETCODE">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Featured Project — HOSPITAL">
 <defs>
 <style>
 .m{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
@@ -14,15 +14,15 @@
 <rect y="0" width="140" height="2" fill="url(#sw)"><animate attributeName="x" from="-140" to="1000" dur="5s" repeatCount="indefinite"/></rect>
 
 <circle class="blink" cx="48" cy="42" r="4.5" fill="#3ddc97"/>
-<text class="m" x="62" y="46" font-size="12" letter-spacing="4" fill="#4fd8ff">RECENTLY DEVELOPED</text>
-<text class="m" x="960" y="46" text-anchor="end" font-size="11" letter-spacing="3" fill="#3ddc97">● ACTIVE BUILD / LATEST REPO</text>
+<text class="m" x="62" y="46" font-size="12" letter-spacing="4" fill="#4fd8ff">FEATURED PROJECT</text>
+<text class="m" x="960" y="46" text-anchor="end" font-size="11" letter-spacing="3" fill="#3ddc97">● PROJECT QUALITY / RECENT ACTIVITY</text>
 
-<text class="s" x="40" y="96" font-size="38" font-weight="800" fill="#e6edf3">DAILY LEETCODE</text>
-<text class="s" x="40" y="124" font-size="17" fill="#8b9bab">C++ solutions to LeetCode problems, organized by problem number and ti</text>
+<text class="s" x="40" y="96" font-size="38" font-weight="800" fill="#e6edf3">HOSPITAL</text>
+<text class="s" x="40" y="124" font-size="17" fill="#8b9bab">Hospital Appointment and Patient Management</text>
 <line x1="40" y1="142" x2="960" y2="142" stroke="#16283a"/>
 <g class="m" font-size="13">
-<text x="40" y="170" fill="#4fd8ff" fill-opacity=".8">PROBLEM</text><text x="130" y="170" fill="#c9d1d9">Engineering intelligent workflows and real-world system applications.</text>
-<text x="40" y="194" fill="#4fd8ff" fill-opacity=".8">STACK</text><text x="130" y="194" fill="#c9d1d9">C++ · C#</text>
-<text x="40" y="218" fill="#4fd8ff" fill-opacity=".8">FEATURE</text><text x="130" y="218" fill="#c9d1d9">C++ solutions to LeetCode problems, organized by problem number and title.</text>
+<text x="40" y="170" fill="#4fd8ff" fill-opacity=".8">PROBLEM</text><text x="130" y="170" fill="#c9d1d9">Streamlining patient services and appointment workflows for a nursing hospital.</text>
+<text x="40" y="194" fill="#4fd8ff" fill-opacity=".8">STACK</text><text x="130" y="194" fill="#c9d1d9">TypeScript · PLpgSQL · CSS · Batchfile</text>
+<text x="40" y="218" fill="#4fd8ff" fill-opacity=".8">FEATURE</text><text x="130" y="218" fill="#c9d1d9">Appointment and patient-management SaaS for Arogyan Nursing Hospital, built with Next.js…</text>
 </g>
 </svg>
