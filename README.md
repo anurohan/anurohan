@@ -111,13 +111,13 @@
 <!-- RECENT-PROJECT-START -->
 <div align="center">
 
-<a href="https://github.com/anurohan/Reporsona">
-  <img src="./assets/recent-project.svg?v=1794978826" alt="Featured Project — REPORSONA" width="100%"/>
+<a href="https://github.com/anurohan/Mentora-ai">
+  <img src="./assets/recent-project.svg?v=1795550121" alt="Featured Project — MENTORA AI" width="100%"/>
 </a>
 
 <br/><br/>
 
-<a href="https://github.com/anurohan/Reporsona"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
+<a href="https://github.com/anurohan/Mentora-ai"><img src="https://img.shields.io/badge/SOURCE_CODE-%3C%2F%3E-4fd8ff?style=for-the-badge&labelColor=0b1118" alt="Source code"/></a>
 
 </div>
 <!-- RECENT-PROJECT-END -->
